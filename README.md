@@ -1,11 +1,12 @@
-Sistema de Controle de Gastos Residenciais
-Objetivo
-Este projeto implementa um sistema de controle de gastos residenciais. O sistema conta com cadastros de transações, cadastro de pessoas e consulta de totais.
+### Sistema de Controle de Gastos Residenciais
+## Objetivo
+# Este projeto implementa um sistema de controle de gastos residenciais. O sistema conta com cadastros de transações, cadastro de pessoas e consulta de totais.
 
 Tecnologias Utilizadas
 A construção do sistema emprega o Back-end em .NET com C# e o Front-end em React com TypeScript. Para o banco de dados e persistência, é utilizado o SQLite integrando o Entity Framework Core. Os dados devem persistir após fechar a aplicação.
 
-Funcionalidades
+## Funcionalidades
+
 O sistema possui o Cadastro de Pessoas, que permite a criação, listagem e deleção. O cadastro contém Identificador (único e gerado automaticamente), Nome e Idade. O Cadastro de Transações oferece funcionalidades básicas de criação e listagem. Este cadastro contém Identificador (gerado automaticamente), Descrição, Valor, Tipo (despesa ou receita) e a Pessoa associada, cujo identificador precisa existir no banco. A Consulta de Totais lista todas as pessoas cadastradas, exibindo o total de receitas, despesas e o saldo (receita – despesa) de cada uma. Ao final da listagem, é exibido o total geral de todas as pessoas, incluindo o total de receitas, despesas e o saldo líquido.
 
 Regras de Negócio e Lógica Implementada
@@ -19,5 +20,6 @@ O sistema realiza Consultas Otimizadas, onde o controlador de Totais calcula tud
 
 A Persistência Local é garantida utilizando o .SaveChangesAsync(), de forma que tudo persiste localmente (em disco no SQLite) entre as execuções da aplicação.
 
-Como Executar o Projeto
+## Como Executar o Projeto
+
 Para rodar a aplicação localmente e validar que os dados persistem após fechar, utilize os comandos exatos. Primeiro, acesse a pasta do back-end no seu terminal e inicie a API executando o comando dotnet run. Em seguida, abra um novo terminal, acesse a pasta do front-end e inicie a interface de usuário utilizando o comando npm run dev.
